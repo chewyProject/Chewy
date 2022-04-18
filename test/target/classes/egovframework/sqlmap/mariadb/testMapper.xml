@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="egovframework.example.test.service.TestMapper">
+	<select id="selectList" resultType="testVo">
+		SELECT * FROM test
+	</select>
+	
+	<select id="selectEmail" resultType="int">
+		SELECT id FROM test WHERE email = #{email}
+	</select>
+	
+	<select id="cartListall" resultType="cartVo">
+		SELECT * FROM cart WHERE m_no = #{m_no}
+	</select>
+	
+	<select id="cartList" resultType="cartVo">
+		SELECT * FROM cart WHERE m_no = #{m_no} AND p_no = #{p_no}
+	</select>
+	
+	<select id="selectProduct" resultType="productVo">
+		SELECT p_name FROM product WHERE p_no = #{p_no}
+	</select>
+	
+	<select id="addPname" resultType="string">
+		SELECT p_name FROM product INNER JOIN cart WHERE 
+															m_no = #{m_no}	AND 
+															product.p_no = cart.p_no AND 
+															product.p_no = #{p_no}
+	</select>
+	
+	<select id="price" resultType="int">
+		SELECT p_price FROM product WHERE product.p_no = #{p_no}
+	</select>
+	
+	<update id="pwfind">
+		UPDATE test SET pw = #{pw} WHERE id = #{id}
+	</update>
+	
+	<update id="addCart">
+		UPDATE cart SET c_total = #{c_total} WHERE #{m_no} AND p_no = #{p_no}
+	</update>
+	
+	<insert id="insertCart">
+		INSERT INTO cart (p_no, c_total, m_no) VALUES (#{p_no}, #{c_total}, #{m_no})
+	</insert>
+	
+	<delete id="deleteCart">
+		DELETE FROM cart WHERE p_no = #{p_no}
+	</delete>
+</mapper>
