@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>TEST PAGE</h1>
+	<button type="button" onclick="location.href='chewyTest/register.do'">회원가입</button>
 </body>
 </html>
