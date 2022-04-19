@@ -16,13 +16,17 @@
 *.mp4
 *.aab
 
+#jdbc db update files
 jdbc.properties
 *.class
 *.jar
 
+#log
 *.log
 
+#metadata files
 .metadata
 */target/*
 
+#Server files
 Servers/*
