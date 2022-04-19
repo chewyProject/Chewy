@@ -9,6 +9,6 @@
 <body>
 	<h1>DB TEST PAGE</h1>
 	
-		${db }
+	${db }
 </body>
 </html>

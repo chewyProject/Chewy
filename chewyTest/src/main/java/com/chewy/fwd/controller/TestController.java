@@ -26,9 +26,7 @@ public class TestController {
 	public String dbtest(TestVo testVo, Model model) throws Exception {
 		System.out.println("db page");
 		
-		int a = testService.test(testVo).get(0).getTest();
-		
-		model.addAttribute("db", a);
+		model.addAttribute("db", testService.test(testVo));
 		
 		return "dbtest";
 	}

@@ -7,10 +7,10 @@
 		<property name="strategy" 	ref="mixPrefixSample" />
 		<property name="blockSize" 	value="10"/>
 		<property name="table"	   	value="IDS"/>
-		<property name="tableName"	value="chewyTest"/>
+		<property name="tableName"	value="SAMPLE"/>
 	</bean>
 	<bean name="mixPrefixSample" class="org.egovframe.rte.fdl.idgnr.impl.strategy.EgovIdGnrStrategyImpl">
-		<property name="prefix"   value="chewyTest" />
+		<property name="prefix"   value="SAMPLE-" />
 		<property name="cipers"   value="5" />
 		<property name="fillChar" value="0" />
 	</bean>	
