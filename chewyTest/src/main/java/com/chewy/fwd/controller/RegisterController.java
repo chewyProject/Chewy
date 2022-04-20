@@ -25,11 +25,9 @@ public class RegisterController {
 	}
 	
 	@RequestMapping(value="/register2.do", method = RequestMethod.POST)
-	public String register(MemberVo memberVo, Model model, HttpServletRequest req) throws Exception{
-		
-		memberVo.setM_name(req.getParameter("m_name"));
-		memberVo.setM_e_mail(req.getParameter("m_email"));
-		memberVo.setM_password(req.getParameter("m_password"));
+	public String register(MemberVo memberVo, Model model) throws Exception{
+
+		System.out.println(memberVo.getM_name());
 		
 		registerService.insertRegister(memberVo);
 		

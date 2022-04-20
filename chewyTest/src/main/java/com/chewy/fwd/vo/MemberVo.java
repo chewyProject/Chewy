@@ -5,7 +5,7 @@ import java.util.Date;
 public class MemberVo {
 	private int m_no;
 	private String m_name;
-	private String m_e_mail;
+	private String m_email;
 	private String m_password;
 	private int m_phone;
 	private String m_road;
@@ -22,13 +22,13 @@ public class MemberVo {
 		super();
 	}
 
-	public MemberVo(int m_no, String m_name, String m_e_mail, String m_password, int m_phone, String m_road,
+	public MemberVo(int m_no, String m_name, String m_email, String m_password, int m_phone, String m_road,
 			String m_city, String m_state, int m_zipcode, String payment, String m_autoship, Date m_logindate,
 			Date m_autodate, int m_seccession) {
 		super();
 		this.m_no = m_no;
 		this.m_name = m_name;
-		this.m_e_mail = m_e_mail;
+		this.m_email = m_email;
 		this.m_password = m_password;
 		this.m_phone = m_phone;
 		this.m_road = m_road;
@@ -58,12 +58,12 @@ public class MemberVo {
 		this.m_name = m_name;
 	}
 
-	public String getM_e_mail() {
-		return m_e_mail;
+	public String getM_email() {
+		return m_email;
 	}
 
-	public void setM_e_mail(String m_e_mail) {
-		this.m_e_mail = m_e_mail;
+	public void setM_email(String m_email) {
+		this.m_email = m_email;
 	}
 
 	public String getM_password() {

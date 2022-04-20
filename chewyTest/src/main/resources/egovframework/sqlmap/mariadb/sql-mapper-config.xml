@@ -3,13 +3,10 @@
 
 <configuration>
     <typeAliases>
-<<<<<<< HEAD
 <!-- 		<typeAlias alias="egovMap" type="org.egovframe.rte.psl.dataaccess.util.EgovMap"/> -->
 		<typeAlias alias="testVo" type="com.chewy.fwd.vo.TestVo"/>
 		<typeAlias alias="productVO" type="com.chewy.fwd.vo.ProductVO"/>
-=======
 		<typeAlias alias="testVo" type="com.chewy.fwd.vo.TestVo"/>
 		<typeAlias alias="memberVo" type="com.chewy.fwd.vo.MemberVo"/>
->>>>>>> c22e3378aade93f76b9ba6aa70dda3ad964bb14f
     </typeAliases>
 </configuration>
