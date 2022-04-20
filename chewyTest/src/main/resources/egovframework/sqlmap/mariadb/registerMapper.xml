@@ -3,7 +3,7 @@
 
 <mapper namespace="com.chewy.fwd.service.RegisterMapper">
 	<insert id="insertRegister">
-		INSERT INTO ( m_name
+		INSERT INTO memeber ( m_name
 					 ,m_email
 					 ,m_password )
 				VALUES (

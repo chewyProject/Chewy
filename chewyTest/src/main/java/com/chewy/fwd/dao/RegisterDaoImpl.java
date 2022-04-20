@@ -20,7 +20,6 @@ public class RegisterDaoImpl implements RegisterDao{
 	
 	@Override
 	public void insertRegister(MemberVo memberVo) throws Exception{
-		System.out.println("daoImpl = "+ memberVo.getM_name());
 		RegisterMapper mapper = sqlSession.getMapper(RegisterMapper.class);
 		mapper.insertRegister(memberVo);
 	}
