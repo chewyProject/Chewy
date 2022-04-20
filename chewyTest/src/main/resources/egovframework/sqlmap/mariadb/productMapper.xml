@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chewy.fwd.service.ProductMapper">
+
+	<select id="selectProductList" resultType="productVO">
+		SELECT * FROM product ORDER BY p_no
+	</select>
+	
+	<select id="selectProduct" parameterType="productVO" resultType="productVO">
+		SELECT * FROM product WHERE p_no = #{p_no}
+	</select>
+	
+	<insert id="insertProduct" parameterType="productVO" >
+<!-- 		INSERT INTO product (p_id, p_name, p_img, p_price, p_total, p_discount, p_star, p_review, p_QnA) -->
+<!-- 		VALUES ((SELECT IFNULL(MAX(p_id) + 1, 1) FROM product CT), #{p_name}, #{p_img}, #{p_price}, -->
+<!-- 				 #{p_total}, #{p_discount}, #{p_star}, #{p_review}, #{p_QnA}) -->
+				 
+			INSERT INTO product (p_no, bct_no, mct_no, sct_no, b_no, p_name, p_img, p_price, p_total, p_discount, p_star, p_question, p_answer)	 
+			VALUES (#{p_no}, #{bct_no}, #{mct_no}, #{sct_no}, #{b_no}, #{p_name}, #{p_img}, #{p_price}, #{p_total}, #{p_discount}, #{p_star}, #{p_question}, #{p_answer})				
+	</insert> 
+	
+<!-- 	<update id="updateProduct" parameterType="productVO"> -->
+<!-- 		UPDATE product   -->
+<!-- 		SET p_name = #{p_name},  -->
+<!-- 			p_img = #{p_img},  -->
+<!-- 			p_price = #{p_price},  -->
+<!-- 			p_total = #{p_total}, -->
+<!-- 			p_discount = #{p_discount},  -->
+<!-- 			p_star = #{p_star},  -->
+<!-- 			p_review = #{p_review},  -->
+<!-- 			p_QnA = #{p_QnA}  -->
+<!-- 		WHERE p_id = #{p_id} -->
+<!-- 	</update> -->
+	
+	<delete id="deleteProduct" parameterType="productVO">
+		DELETE FROM product WHERE p_no = #{p_no}
+	</delete>
+</mapper>
