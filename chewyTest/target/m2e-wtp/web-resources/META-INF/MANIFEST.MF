@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: wh153
+=======
+Built-By: SH
+>>>>>>> c22e3378aade93f76b9ba6aa70dda3ad964bb14f
 Build-Jdk: 15.0.2
 Created-By: Maven Integration for Eclipse
 
