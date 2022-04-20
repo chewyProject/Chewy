@@ -30,3 +30,15 @@ jdbc.properties
 
 #Server files
 Servers/*
+
+#Setting
+.settings/
+
+##Eclipse Patch##
+.project
+
+
+##tools##
+.classpath
+/classes/
+/test-classes/
