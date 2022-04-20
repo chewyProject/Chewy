@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: SH
+=======
+Built-By: wh153
+>>>>>>> origin/main
 Build-Jdk: 15.0.2
 Created-By: Maven Integration for Eclipse
 

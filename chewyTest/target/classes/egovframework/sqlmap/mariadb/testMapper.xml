@@ -5,6 +5,7 @@
 	
 	<select id="test" resultType="testVo">
 		SELECT * FROM test
+		
 	</select>
 
 </mapper>

@@ -15,14 +15,14 @@ public class TestController {
 	@Autowired
 	private TestService testService;
 	
-	@RequestMapping(value="test.do", method = RequestMethod.GET)
+	@RequestMapping(value="/test.do", method = RequestMethod.GET)
 	public String test() {
 		System.out.println("test page");
 		
 		return "test";
 	}
 	
-	@RequestMapping(value="dbtest.do", method = RequestMethod.GET)
+	@RequestMapping(value="/dbtest.do", method = RequestMethod.GET)
 	public String dbtest(TestVo testVo, Model model) throws Exception {
 		System.out.println("db page");
 		
